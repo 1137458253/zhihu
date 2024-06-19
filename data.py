@@ -51,6 +51,7 @@ def save_data(driver, key_word='妙可蓝多', href_num=50):
     print(href_values)
 
     dictionary = {}
+
     for href, text in zip(href_values, text_values):
         dictionary.update({text: href})
     with open(data_path / f'{key_word}_{href_num}.json', 'w') as f:
